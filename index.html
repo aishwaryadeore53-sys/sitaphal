@@ -133,22 +133,7 @@ I LOVE YOU MY BABYYYYYY...😘😘😘😘😘😘
 <button onclick="toggleMusic()">🎵 Play / Pause Music</button>
 
 </div>
-
-<!-- MUSIC -->
-<audio id="bgMusic" loop>
-    <source src="birthday.mp3" type="audio/mpeg">
-</audio>
-
 <script>
-function toggleMusic(){
-    var music = document.getElementById("bgMusic");
-    if(music.paused){
-        music.play();
-    } else {
-        music.pause();
-    }
-}
-
 // Floating Hearts
 function createHeart(){
     var heart = document.createElement("div");
@@ -168,5 +153,3 @@ setInterval(createHeart, 600);
 
 </body>
 </html>
-
-
