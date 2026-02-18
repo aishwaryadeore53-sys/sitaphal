@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday My Sugarplum ❤️</title>
+
+<style>
+body{
+    margin:0;
+    padding:0;
+    background: linear-gradient(to bottom, #000000, #2b0000);
+    font-family: 'Poppins', sans-serif;
+    color:white;
+    text-align:center;
+    overflow-x:hidden;
+}
+
+.container{
+    padding:40px 20px;
+    max-width:800px;
+    margin:auto;
+}
+
+h1{
+    color:#ff1a1a;
+    font-size:32px;
+    margin-bottom:10px;
+}
+
+.first-text{
+    margin-bottom:25px;
+    line-height:1.6;
+    opacity:0.9;
+}
+
+.section{
+    margin:20px 0;
+    line-height:1.8;
+    font-size:16px;
+    opacity:0.95;
+}
+
+.highlight{
+    color:#ff4d4d;
+    font-weight:bold;
+}
+
+button{
+    margin-top:25px;
+    padding:10px 20px;
+    border:none;
+    border-radius:25px;
+    background:#ff1a1a;
+    color:white;
+    font-size:14px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#ff4d4d;
+}
+
+.heart{
+    position:fixed;
+    bottom:-10px;
+    color:red;
+    animation:float 8s linear infinite;
+}
+
+@keyframes float{
+    0%{
+        transform:translateY(0);
+        opacity:1;
+    }
+    100%{
+        transform:translateY(-100vh);
+        opacity:0;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Happy Birthday My Sugarplum ❤️</h1>
+
+<div class="first-text">
+This is our first birthday together… and already you mean more to me than you know.  
+Thank you for loving me the way you do.
+</div>
+
+<div class="section">
+You walked into my life just one month ago,  
+and somehow made it brighter, warmer, and softer.  
+I’m so lucky you’re mine. I love you so much ❤️
+</div>
+
+<div class="section">
+No matter where we are, I’m always choosing you.  
+Even if distance stands between us today,  
+my love has never felt closer.
+</div>
+
+<div class="section">
+Yes, we fight sometimes.  
+We misunderstand each other.  
+But at the end of every argument,  
+we still choose love.  
+And that’s what truly matters.
+</div>
+
+<div class="section highlight">
+You are not just my boyfriend…  
+You are my comfort, my peace, my home. ❤️
+</div>
+
+<div class="section">
+Every fight, every misunderstanding, every moment of waiting —  
+it’s all worth it, because at the end of the day,  
+I still get to call you mine.
+</div>
+
+<div class="section">
+I may not be able to hug you today,  
+so I’m sending all my love wrapped in these words  
+until the day I can hold you in my arms.
+I LOVE YOU MY BABYYYYYY...😘😘😘😘😘😘
+</div>
+
+<button onclick="toggleMusic()">🎵 Play / Pause Music</button>
+
+</div>
+
+<!-- MUSIC -->
+<audio id="bgMusic" loop>
+    <source src="birthday.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+function toggleMusic(){
+    var music = document.getElementById("bgMusic");
+    if(music.paused){
+        music.play();
+    } else {
+        music.pause();
+    }
+}
+
+// Floating Hearts
+function createHeart(){
+    var heart = document.createElement("div");
+    heart.classList.add("heart");
+    heart.innerHTML = "❤️";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.fontSize = (Math.random() * 20 + 15) + "px";
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+        heart.remove();
+    }, 8000);
+}
+
+setInterval(createHeart, 600);
+</script>
+
+</body>
+</html>
